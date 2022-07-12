@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e15c5d414d9be7f4ba23204f1713a465
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - camera: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - bulletHit: {instanceID: 0}
+  - bulletPath: {fileID: 8183805547908265597, guid: 2e996e578037dab4bae407ad8f95e0cc, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
