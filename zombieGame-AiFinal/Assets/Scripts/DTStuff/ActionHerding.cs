@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionHerding: DTNode
+public class ActionHerding: Action
 {
-    public bool activated = false;
+    public bool newActivated = false;
     
     public override DTNode MakeDecision()
     {
@@ -12,9 +12,9 @@ public class ActionHerding: DTNode
         return this;
     }
 
-    public virtual void LateUpdate()
+    public override void LateUpdate()
     {
-        if (!activated)
+        if (!newActivated)
         {
             return;
         }

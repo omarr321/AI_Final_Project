@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionRushing: DTNode
+public class ActionRushing: Action
 {
-    public bool activated = false;
-    
+    public bool newActivated = false;
+    public float speed = 10.0f;
+
     public override DTNode MakeDecision()
     {
-        // TODO: Add decision logic here
-        return this;
+        return GetComponent<DecisionRushing>().GetBranch();
     }
 
-    public virtual void LateUpdate()
+    public override void LateUpdate()
     {
-        if (!activated)
+        if (!newActivated)
         {
             return;
         }
-        //TODO: Implement Agent behaviors here
+
+        GameObject Player = GameObject.Find("Player");
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.LookAt(Player.transform.position);
     }
 }
