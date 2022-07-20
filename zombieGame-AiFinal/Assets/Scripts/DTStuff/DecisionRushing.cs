@@ -6,7 +6,6 @@ public class DecisionRushing : Decision
 {
     public override Action GetBranch()
     {
-        // TODO: Add branch logic here
-        return null;
+        return nodeTrue;
     }
 }

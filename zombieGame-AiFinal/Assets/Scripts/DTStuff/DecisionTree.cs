@@ -10,7 +10,7 @@ public class DecisionTree : MonoBehaviour
 
     void Start()
     {
-        // TODO: Set starting node
+        actionNew = GetComponent<ActionHerding>();
     }
 
     void Update()
