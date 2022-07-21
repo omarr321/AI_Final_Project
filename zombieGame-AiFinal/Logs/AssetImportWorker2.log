@@ -1,0 +1,249 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.6f1 (7da38d85baf6) revision 8233869'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Enterprise' Language: 'en' Physical Memory: 16282 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/chinr1/Desktop/AI_Final_Project/zombieGame-AiFinal
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+60954
+Successfully changed project path to: C:/Users/chinr1/Desktop/AI_Final_Project/zombieGame-AiFinal
+C:/Users/chinr1/Desktop/AI_Final_Project/zombieGame-AiFinal
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 462.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.6f1 (7da38d85baf6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/chinr1/Desktop/AI_Final_Project/zombieGame-AiFinal/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f10)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   25.21.14.2554
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56116
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.039583 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 465.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.407 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3410ms)
+		BeginReloadAssembly (387ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (5ms)
+		EndReloadAssembly (2410ms)
+			LoadAssemblies (369ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (542ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (148ms)
+			SetupLoadedEditorAssemblies (1463ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (43ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (466ms)
+				BeforeProcessingInitializeOnLoad (6ms)
+				ProcessInitializeOnLoadAttributes (729ms)
+				ProcessInitializeOnLoadMethodAttributes (218ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.047806 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\chinr1\Desktop\AI_Final_Project\zombieGame-AiFinal\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\chinr1\Desktop\AI_Final_Project\zombieGame-AiFinal\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.090 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5092ms)
+		BeginReloadAssembly (369ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (4057ms)
+			LoadAssemblies (457ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1453ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (289ms)
+			SetupLoadedEditorAssemblies (1712ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (502ms)
+				ProcessInitializeOnLoadAttributes (1119ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3445 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (111.0 KB). Loaded Objects now: 3923.
+Memory consumption went from 132.0 MB to 131.9 MB.
+Total: 3.747700 ms (FindLiveObjects: 0.268700 ms CreateObjectMapping: 0.196400 ms MarkObjects: 3.164600 ms  DeleteObjects: 0.117100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 244459.623734 seconds.
+  path: Assets/Assets/Prefabs/Zombie/BossZombie.prefab
+  artifactKey: Guid(dd8b56f6724bae242ab127d6d6dc0605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Prefabs/Zombie/BossZombie.prefab using Guid(dd8b56f6724bae242ab127d6d6dc0605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f70760e4272e9852fa98d2fa657e3428') in 0.376073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.263800 seconds.
+  path: Assets/Assets/Prefabs/PowerUps/HealthPrefab.prefab
+  artifactKey: Guid(df4282b458f93bd4b817687259aaca35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets/Prefabs/PowerUps/HealthPrefab.prefab using Guid(df4282b458f93bd4b817687259aaca35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc7376ad5deecdcfbf81afc213bcb6ba') in 0.119579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 83.363639 seconds.
+  path: Assets/Scripts/EntityScipts
+  artifactKey: Guid(c069c0b810722724a92bd598f364b683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/EntityScipts using Guid(c069c0b810722724a92bd598f364b683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce08e1b7f7321959bf36219402cbc93') in 0.016802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 416.548150 seconds.
+  path: Assets/Scripts/Companion/FSM/State.cs
+  artifactKey: Guid(3950dd77773609d4da6975360c89b261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Companion/FSM/State.cs using Guid(3950dd77773609d4da6975360c89b261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c8be767f4a0c45e55d4f7182b502f1') in 0.016189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 141.113262 seconds.
+  path: Assets/Scripts/Companion/FSM/States/Fetch.cs
+  artifactKey: Guid(91db0fe67bf564d468994ca6b85fd407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Companion/FSM/States/Fetch.cs using Guid(91db0fe67bf564d468994ca6b85fd407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0749230cab389d370e0b309653c5bfa5') in 0.005407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.453206 seconds.
+  path: Assets/Scripts/Companion/FSM/States/Idle.cs
+  artifactKey: Guid(8025c35f1e26053498168d128d070015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Companion/FSM/States/Idle.cs using Guid(8025c35f1e26053498168d128d070015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e621247517dca58648680b87b8ca68') in 0.005017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.954459 seconds.
+  path: Assets/Scripts/Companion/FSM/States/Homeward.cs
+  artifactKey: Guid(1ce6c224834eff741a8da988959e9387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Companion/FSM/States/Homeward.cs using Guid(1ce6c224834eff741a8da988959e9387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1859508f1b59a75e5cb80a7a42003e12') in 0.005051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 426.158203 seconds.
+  path: Assets/Scripts/PowerUps/AddHealth.cs
+  artifactKey: Guid(7560fcd26a4b50b4383e3af2613730a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/AddHealth.cs using Guid(7560fcd26a4b50b4383e3af2613730a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b93ae946075324f6d30019b462e73cc') in 0.004924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.665619 seconds.
+  path: Assets/Scripts/PowerUps/MaxHealth.cs
+  artifactKey: Guid(c060013d93c13be489e3ad81f795f697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/MaxHealth.cs using Guid(c060013d93c13be489e3ad81f795f697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f6c787213b5a9e47574e8901da2715') in 0.005432 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.530793 seconds.
+  path: Assets/Scripts/PowerUps/Nuke.cs
+  artifactKey: Guid(bfb86d2fb53a34643b2fc18e3edf0fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/Nuke.cs using Guid(bfb86d2fb53a34643b2fc18e3edf0fe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da97c9014318c31c13dd7ebcd6b74569') in 0.014556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.399492 seconds.
+  path: Assets/Scripts/PowerUps/SpeedUp.cs
+  artifactKey: Guid(682b43aa8f972dc4c8261060d175c4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/SpeedUp.cs using Guid(682b43aa8f972dc4c8261060d175c4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3499edbfeb47ec49791fd116a48dc38e') in 0.013410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 113.195013 seconds.
+  path: Assets/Scripts/PowerUps/SpeedUp.cs
+  artifactKey: Guid(682b43aa8f972dc4c8261060d175c4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/SpeedUp.cs using Guid(682b43aa8f972dc4c8261060d175c4a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae623da6b76eafaf38634f010d14a22') in 0.004651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.417453 seconds.
+  path: Assets/Scripts/PowerUps/guns
+  artifactKey: Guid(e30779527e9cecf41ab75f7706a148b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/guns using Guid(e30779527e9cecf41ab75f7706a148b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1d00bdfafe00a24e8aca60ee32bade6') in 0.013565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.011667 seconds.
+  path: Assets/Scripts/PowerUps/guns/BulletTrail.cs
+  artifactKey: Guid(75ff01cdc85cf1a4195b9a9c0b42116a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/guns/BulletTrail.cs using Guid(75ff01cdc85cf1a4195b9a9c0b42116a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfd9582592d83a9a2fe0c8c399e2ea87') in 0.013782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.100870 seconds.
+  path: Assets/Scripts/PowerUps/guns/GunSpawn.cs
+  artifactKey: Guid(04144e6ec06191c4f8ca8257704f9b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PowerUps/guns/GunSpawn.cs using Guid(04144e6ec06191c4f8ca8257704f9b2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9820d44b4542524a90048852e5085916') in 0.005419 seconds 

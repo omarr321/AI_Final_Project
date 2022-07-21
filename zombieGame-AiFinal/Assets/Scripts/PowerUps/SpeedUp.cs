@@ -19,6 +19,7 @@ public class SpeedUp : MonoBehaviour
             timer += Time.deltaTime;
             if (timer % 60 >= 10)
             {
+                State.powerups.Remove(this);
                 Destroy(gameObject);
             }
     }
@@ -28,6 +29,7 @@ public class SpeedUp : MonoBehaviour
         if (other.gameObject == player)
         {
             other.gameObject.GetComponent<Movement>().increaseSpeed(val);
+            State.powerups.Remove(this);
             Destroy(gameObject);
         }
     }

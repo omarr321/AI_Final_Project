@@ -19,6 +19,7 @@ public class AddHealth : MonoBehaviour
             timer += Time.deltaTime;
             if (timer % 60 >= 10)
             {
+                State.powerups.Remove(this);
                 Destroy(gameObject);
             }
     }
@@ -26,6 +27,7 @@ public class AddHealth : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         if (other.gameObject == player) {
             other.gameObject.GetComponent<PlayerMaster>().addHealth(val);
+            State.powerups.Remove(this);
             Destroy(gameObject);
         }
     }

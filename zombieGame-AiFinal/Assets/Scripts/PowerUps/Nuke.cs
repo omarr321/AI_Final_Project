@@ -18,6 +18,7 @@ public class Nuke : MonoBehaviour
             timer += Time.deltaTime;
             if (timer % 60 >= 10)
             {
+                State.powerups.Remove(this);
                 Destroy(gameObject);
             }
     }
@@ -34,6 +35,7 @@ public class Nuke : MonoBehaviour
                     zom.GetComponent<ZombieAI>().clicked(10000);
                 }
             }
+            State.powerups.Remove(this);
             Destroy(gameObject);
         }
     }

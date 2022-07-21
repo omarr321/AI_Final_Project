@@ -19,6 +19,7 @@ public class MaxHealth : MonoBehaviour
             timer += Time.deltaTime;
             if (timer % 60 >= 10)
             {
+                State.powerups.Remove(this);
                 Destroy(gameObject);
             }
     }
@@ -28,6 +29,7 @@ public class MaxHealth : MonoBehaviour
         if (other.gameObject == player)
         {
             other.gameObject.GetComponent<PlayerMaster>().addMaxHealth(val);
+            State.powerups.Remove(this);
             Destroy(gameObject);
         }
     }

@@ -4992,7 +4992,7 @@ GameObject:
   - component: {fileID: 1902713843982090559}
   m_Layer: 2
   m_Name: PistolDrop
-  m_TagString: gun
+  m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
