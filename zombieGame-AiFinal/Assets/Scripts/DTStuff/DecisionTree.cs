@@ -15,13 +15,13 @@ public class DecisionTree : MonoBehaviour
 
     void Update()
     {
-        actionNew.activated = false;
+        actionNew.enabled = false;
         actionOld = actionNew;
         actionNew = actionNew.MakeDecision() as Action;
         if (actionNew == null)
         {
             actionNew = actionOld;
         }
-        actionNew.activated = true;
+        actionNew.enabled = true;
     }
 }
