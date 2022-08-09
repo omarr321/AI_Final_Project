@@ -11,10 +11,10 @@ public class ActionHerding: Action
     {
         return GetComponent<DecisionHerding>().GetBranch();
     }
-        public float distance=1.0f;
-        public Vector3 beanDistance;
+        public float distance;
         public  Vector3 diffDistance;
         public int count = 0;
+
 
 
     public override void LateUpdate()
@@ -23,14 +23,21 @@ public class ActionHerding: Action
 
 
         for (int i=0; i<childBeans.Length; i++){
-            beanDistance=childBeans[i].transform.position;
-            diffDistance=this.transform.position-beanDistance;
-            Debug.Log("Hello " + diffDistance);
-            childBeans[i].transform.LookAt(this.transform.position);
-            childBeans[i].transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            count++;
-            if (count>3){
-                // switch to rushing
+            distance = Vector3.Distance(this.transform.position, childBeans[i].transform.position);
+            if (distance < 10){
+                childBeans[i].transform.LookAt(this.transform.position);
+                childBeans[i].transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
+                distance = Vector3.Distance(this.transform.position, childBeans[i].transform.position);
+            if (distance<2){
+                count++;
+                if (count>3){
+                    GameObject Player = GameObject.Find("Player");
+                    childBeans[i].transform.LookAt(Player.transform.position);
+                    childBeans[i].transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
+                    this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
+                    this.transform.LookAt(Player.transform.position);
+                }
+            }
             }
         }
     }
