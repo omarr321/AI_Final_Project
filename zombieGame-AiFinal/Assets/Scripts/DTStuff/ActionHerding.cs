@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class ActionHerding: Action
 {
-    public bool newActivated = false;
-    
     public override DTNode MakeDecision()
     {
-        // TODO: Add decision logic here
-        return this;
+        return GetComponent<DecisionHerding>().GetBranch();
     }
 
     public override void LateUpdate()
     {
-        if (!newActivated)
-        {
-            return;
-        }
-        //TODO: Implement Agent behaviors here
+        //TODO: Write the code here so that the zombie heads towards the cloest zombies
     }
 }

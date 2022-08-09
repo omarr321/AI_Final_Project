@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Action : DTNode
 {
-    public bool activated = false;
-    
+    public float speed = 4.0f;
+
     public override DTNode MakeDecision()
     {
         return this;
@@ -13,10 +13,5 @@ public class Action : DTNode
 
     public virtual void LateUpdate()
     {
-        if (!activated)
-        {
-            return;
-        }
-        //Implement Agent behaviors here
     }
 }
