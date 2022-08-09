@@ -1,1 +1,1 @@
-C:\Users\radwano\Desktop\AI_Final_Project\zombieGame-AiFinal
+/Users/juicy/Documents/Projects/AI_Final_Project/zombieGame-AiFinal
