@@ -4,41 +4,46 @@ using UnityEngine;
 
 public class ActionHerding: Action
 {
-    Collider[] zombeanSphere;
-    int i=0;
-    public static List<GameObject> Test = new List<GameObject>();
     public override DTNode MakeDecision()
     {
-        return GetComponent<DecisionHerding>().GetBranch();
+        GameObject cloestZombean = this.FindClosestZombean();
+        float dis = Vector3.Distance(cloestZombean.transform.position, this.transform.position);
+
+        if (dis < 3) {
+            Debug.Log("Rushing...");
+            return GetComponent<DecisionRushing>().GetBranch();
+        } else {
+            return GetComponent<DecisionHerding>().GetBranch();
+        }
     }
         public float distance;
         public  Vector3 diffDistance;
         public int count = 0;
 
+    public GameObject FindClosestZombean() {
+        GameObject[] zombeans = GameObject.FindGameObjectsWithTag("clickable");
+        GameObject closest = null;
 
+        float distance = Mathf.Infinity;
+        foreach (GameObject zombean in zombeans) {
+            float dis = Vector3.Distance(zombean.transform.position, this.transform.position);
+            if (dis < distance) {
+                if (zombean != gameObject)
+                {
+                    closest = zombean;
+                    distance = dis;
+                }
+            }
+        }
+
+        return closest;
+    }
 
     public override void LateUpdate()
     {
-        GameObject[] childBeans = GameObject.FindGameObjectsWithTag("clickable");
+        GameObject cloestZombean = this.FindClosestZombean();
 
-
-        for (int i=0; i<childBeans.Length; i++){
-            distance = Vector3.Distance(this.transform.position, childBeans[i].transform.position);
-            if (distance < 10){
-                childBeans[i].transform.LookAt(this.transform.position);
-                childBeans[i].transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
-                distance = Vector3.Distance(this.transform.position, childBeans[i].transform.position);
-            if (distance<2){
-                count++;
-                if (count>3){
-                    GameObject Player = GameObject.Find("Player");
-                    childBeans[i].transform.LookAt(Player.transform.position);
-                    childBeans[i].transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
-                    this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
-                    this.transform.LookAt(Player.transform.position);
-                }
-            }
-            }
-        }
+        this.transform.LookAt(cloestZombean.transform.position);
+        this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
     }
 }
