@@ -11,24 +11,27 @@ public class ActionHerding: Action
     {
         return GetComponent<DecisionHerding>().GetBranch();
     }
+        public float distance=1.0f;
+        public Vector3 beanDistance;
+        public  Vector3 diffDistance;
+        public int count = 0;
+
 
     public override void LateUpdate()
     {
-        int count = 0;
-        zombeanSphere=Physics.OverlapSphere(transform.position, 0.5f);
-        foreach (var zombeanNeighbor in zombeanSphere)
-        {
-            if (zombeanNeighbor.tag=="clickable"){
-                count++;
-                zombeanNeighbor.transform.position=Vector3.MoveTowards(zombeanNeighbor.transform.position, transform.position, 1.0f);
-            }
-        }
+        GameObject[] childBeans = GameObject.FindGameObjectsWithTag("clickable");
 
-        if (count > 3) {
-           zombeanNeighbor.transform.position=Vector3.MoveTowards(zombeanNeighbor.transform)
-        } else {
-           
-            //TODO: GO to cloest zombean
+
+        for (int i=0; i<childBeans.Length; i++){
+            beanDistance=childBeans[i].transform.position;
+            diffDistance=this.transform.position-beanDistance;
+            Debug.Log("Hello " + diffDistance);
+            childBeans[i].transform.LookAt(this.transform.position);
+            childBeans[i].transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            count++;
+            if (count>3){
+                // switch to rushing
+            }
         }
     }
 }
