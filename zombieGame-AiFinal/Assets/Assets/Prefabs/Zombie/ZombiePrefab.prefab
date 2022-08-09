@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e4f5c8b583a3f4a87a0746b1eb9e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wakeUpDistance: 0
   speed: 0
   size: 0
   deathParticle: {fileID: 8680451565037621685, guid: 319229c9a48b5494dab8991780ca220b, type: 3}
@@ -171,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7736dbcaa979be84396d8c35965fcddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeTrue: {fileID: 0}
-  nodeFalse: {fileID: 0}
+  nodeTrue: {fileID: 8095099658098557256}
+  nodeFalse: {fileID: 7038895965103359062}
 --- !u!114 &6135816912382020983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c69913e9d7b64c8fbe81a89bfc29c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeTrue: {fileID: 0}
-  nodeFalse: {fileID: 0}
+  nodeTrue: {fileID: 7038895965103359062}
+  nodeFalse: {fileID: 8095099658098557256}
 --- !u!114 &8095099658098557256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,8 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d75dbdaaca4c0749bca8161193f68b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 0
-  newActivated: 0
   speed: 10
 --- !u!114 &7038895965103359062
 MonoBehaviour:
@@ -214,5 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40b582f246ab4df39010abcb4f64f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 0
-  newActivated: 0
+  speed: 4
+  distance: 0
+  diffDistance: {x: 0, y: 0, z: 0}
+  count: 0

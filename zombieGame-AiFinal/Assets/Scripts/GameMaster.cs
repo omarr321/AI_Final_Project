@@ -66,6 +66,7 @@ public class GameMaster : MonoBehaviour
         totalTime = 0;
         //zombies = 0;
         startingZombies = Random.Range(10, 25) / 3;
+        startingZombies = 2;
         //startingZombies = 500;
         for (int i = 0; i < startingZombies; i++) {
             //Debug.Log("Creating zombie " + i + "...");
