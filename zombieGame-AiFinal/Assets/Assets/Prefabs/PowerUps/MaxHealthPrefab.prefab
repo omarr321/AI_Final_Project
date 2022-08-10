@@ -4923,7 +4923,7 @@ GameObject:
   - component: {fileID: 317325051953657180}
   m_Layer: 2
   m_Name: MaxHealthPrefab
-  m_TagString: Untagged
+  m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

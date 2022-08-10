@@ -86,25 +86,25 @@ public class ZombieAI : MonoBehaviour
                     {
                         GameObject health = Instantiate(healthPowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         health.tag = "powerup";
-                        health.GetComponent<AddHealth>().player = player;
+                        StateController.instance.powerups.Add(health.GetComponent<powerup>());
                     }
                     else if (chance == 1)
                     {
                         GameObject maxHealth = Instantiate(maxHealthPowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         maxHealth.tag = "powerup";
-                        maxHealth.GetComponent<MaxHealth>().player = player;
+                        StateController.instance.powerups.Add(maxHealth.GetComponent<powerup>());
                     }
                     else if (chance == 2)
                     {
                         GameObject nuke = Instantiate(nukePowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         nuke.tag = "powerup";
-                        nuke.GetComponent<Nuke>().player = player;
+                        StateController.instance.powerups.Add(nuke.GetComponent<powerup>());
                     }
                     else if (chance == 3)
                     {
                         GameObject speedUp = Instantiate(speedUpPowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         speedUp.tag = "powerup";
-                        speedUp.GetComponent<SpeedUp>().player = player;
+                        StateController.instance.powerups.Add(speedUp.GetComponent<powerup>());
                     }
                     else if (chance == 4)
                     {
@@ -134,7 +134,6 @@ public class ZombieAI : MonoBehaviour
                     {
                         Debug.Log("Error");
                     }
-
                 }
             }
             Destroy(gameObject);

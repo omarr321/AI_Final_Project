@@ -11,6 +11,7 @@ TagManager:
   - hitTag
   - gun
   - clickableBoss
+  - Companion
   layers:
   - Default
   - TransparentFX
