@@ -1,11 +1,7 @@
 {
   "dependencies": {
     "com.unity.collab-proxy": {
-<<<<<<< HEAD
       "version": "1.17.1",
-=======
-      "version": "1.15.18",
->>>>>>> main
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -81,11 +77,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-<<<<<<< HEAD
-      "version": "1.4.2",
-=======
       "version": "1.4.0",
->>>>>>> main
       "depth": 1,
       "source": "registry",
       "dependencies": {
