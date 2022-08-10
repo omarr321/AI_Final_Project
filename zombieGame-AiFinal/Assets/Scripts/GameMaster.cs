@@ -66,6 +66,7 @@ public class GameMaster : MonoBehaviour
         totalTime = 0;
         //zombies = 0;
         startingZombies = Random.Range(10, 25) / 3;
+        startingZombies = 2;
         //startingZombies = 500;
         for (int i = 0; i < startingZombies; i++) {
             //Debug.Log("Creating zombie " + i + "...");
@@ -169,7 +170,6 @@ public class GameMaster : MonoBehaviour
                     {
                         script.speed = player.GetComponent<Movement>().speed + .4f;
                     }
-                    script.wakeUpDistance = Random.Range(30f, 120f) * (totalTime / timeRounds) / 5 + 30;
                     script.size = Random.Range(-0.2f, 1f);
                     script.hitMarker = hitMarkerScreen;
                 }
@@ -182,7 +182,6 @@ public class GameMaster : MonoBehaviour
                         script.speed = player.GetComponent<Movement>().speed + .4f;
                     }
                     script.setHealth(200);
-                    script.wakeUpDistance = Random.Range(30f, 120f) * (totalTime / timeRounds) / 5 + 30;
                     script.size = Random.Range(-0.2f, 1f);
                     script.hitMarker = hitMarkerScreen;
                     zombie.GetComponent<Renderer>().material.color = new Color(0f, 0.5f, 0.5f);
@@ -196,7 +195,6 @@ public class GameMaster : MonoBehaviour
                         script.speed = player.GetComponent<Movement>().speed + .4f;
                     }
                     script.setHealth(50);
-                    script.wakeUpDistance = Random.Range(30f, 120f) * (totalTime / timeRounds) / 5 + 30;
                     script.size = Random.Range(-0.2f, 1f);
                     script.hitMarker = hitMarkerScreen;
                     zombie.GetComponent<Renderer>().material.color = new Color(0.4f, 0f, 0f);
@@ -209,7 +207,6 @@ public class GameMaster : MonoBehaviour
                         script.speed = player.GetComponent<Movement>().speed + .4f;
                     }
                     script.setHealth(600);
-                    script.wakeUpDistance = Random.Range(30f, 120f) * (totalTime / timeRounds) / 5 + 30;
                     script.size = Random.Range(1.5f, 2.5f);
                     script.hitMarker = hitMarkerScreen;
                     zombie.GetComponent<Renderer>().material.color = new Color(0.4f, 0.4f, 0.4f);

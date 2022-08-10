@@ -5,7 +5,6 @@ using UnityEngine;
 public class ZombieAI : MonoBehaviour
 {
     [Header("General")]
-    public float wakeUpDistance = 30;
     public float speed = 1.0f;
     public float size = 1.0f;
     public GameObject deathParticle;
@@ -34,24 +33,13 @@ public class ZombieAI : MonoBehaviour
     {
         transform.localScale += new Vector3(size, size, size);
         player = GameObject.Find("Player");
+        GetComponent<ActionRushing>().speed = speed;
+        GetComponent<ActionHerding>().speed = speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float xVal = player.transform.position.x - transform.position.x;
-        float yVal = player.transform.position.y - transform.position.y;
-        float zVal = player.transform.position.z - transform.position.z;
-
-        float mag = Mathf.Sqrt((xVal * xVal) + (yVal * yVal) + (zVal * zVal));
-        //Debug.Log("Dist from player: " + mag);
-
-        if (mag <= wakeUpDistance)
-        {
-            //Debug.Log("Heading Towards Player!");
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            transform.LookAt(player.transform.position);
-        }
     }
 
     void OnCollisionEnter(Collision collision)
