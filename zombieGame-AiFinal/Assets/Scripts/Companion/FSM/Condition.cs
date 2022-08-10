@@ -10,10 +10,14 @@ public class Condition
     public Condition()
     {
         this.type = 'a';
+        player = GameObject.FindGameObjectWithTag("Player");
+        companion = GameObject.FindGameObjectWithTag("Companion");
     }
     public Condition(char c)
     {
         this.type = c;
+        player = GameObject.FindGameObjectWithTag("Player");
+        companion = GameObject.FindGameObjectWithTag("Companion");
     }
     public virtual bool Test() 
     {
@@ -23,7 +27,7 @@ public class Condition
                 return 0 < StateController.instance.powerups.Count;
                 break;
             case 'b':
-                return Vector3.Distance(companion.transform.position, player.transform.position) < 1;
+                return Vector3.Distance(companion.transform.position, player.transform.position) < 2.5;
                 break;
             case 'c':
                 return 0 == StateController.instance.powerups.Count;

@@ -14,7 +14,6 @@ public class Idle : State
             }
         }
         if (!flag) {
-            Debug.Log(player.transform.position);
             companion.transform.position = Vector3.MoveTowards(companion.transform.position, player.transform.position, 5.0f*Time.deltaTime);
         }
     }

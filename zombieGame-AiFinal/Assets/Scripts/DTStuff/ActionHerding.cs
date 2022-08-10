@@ -7,13 +7,21 @@ public class ActionHerding: Action
     public override DTNode MakeDecision()
     {
         GameObject cloestZombean = this.FindClosestZombean();
-        float dis = Vector3.Distance(cloestZombean.transform.position, this.transform.position);
+        if (cloestZombean != null)
+        {
+            float dis = Vector3.Distance(cloestZombean.transform.position, this.transform.position);
 
-        if (dis < 3) {
-            Debug.Log("Rushing...");
+            if (dis < 3)
+            {
+                return GetComponent<DecisionRushing>().GetBranch();
+            }
+            else
+            {
+                return GetComponent<DecisionHerding>().GetBranch();
+            }
+        }
+        else {
             return GetComponent<DecisionRushing>().GetBranch();
-        } else {
-            return GetComponent<DecisionHerding>().GetBranch();
         }
     }
         public float distance;
@@ -43,7 +51,10 @@ public class ActionHerding: Action
     {
         GameObject cloestZombean = this.FindClosestZombean();
 
-        this.transform.LookAt(cloestZombean.transform.position);
-        this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
+        if (cloestZombean != null)
+        {
+            this.transform.LookAt(cloestZombean.transform.position);
+            this.transform.Translate(Vector3.forward * 1.0f * Time.deltaTime);
+        }
     }
 }

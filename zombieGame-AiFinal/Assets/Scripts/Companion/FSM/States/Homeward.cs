@@ -15,12 +15,12 @@ public class Homeward : State
         }
         if (!flag) 
         {
-            Debug.Log(player.transform.position);
             companion.transform.position = Vector3.MoveTowards(companion.transform.position, player.transform.position, 5.0f*Time.deltaTime);
         }
     }
     public override void LateUpdate()
     {
+        Debug.Log("Ding");
         foreach (Transition t in transitions)
         {
             if (t.condition.Test())
