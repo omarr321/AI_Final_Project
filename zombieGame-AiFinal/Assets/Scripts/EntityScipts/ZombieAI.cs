@@ -98,29 +98,25 @@ public class ZombieAI : MonoBehaviour
                     {
                         GameObject health = Instantiate(healthPowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         health.tag = "powerup";
-                        health.GetComponent<AddHealth>().player = player;
-                        State.powerups.Add(health);
+                        StateController.instance.powerups.Add(health.GetComponent<powerup>());
                     }
                     else if (chance == 1)
                     {
                         GameObject maxHealth = Instantiate(maxHealthPowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         maxHealth.tag = "powerup";
-                        maxHealth.GetComponent<MaxHealth>().player = player;
-                        State.powerups.Add(maxHealth);
+                        StateController.instance.powerups.Add(maxHealth.GetComponent<powerup>());
                     }
                     else if (chance == 2)
                     {
                         GameObject nuke = Instantiate(nukePowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         nuke.tag = "powerup";
-                        nuke.GetComponent<Nuke>().player = player;
-                        State.powerups.Add(nuke);
+                        StateController.instance.powerups.Add(nuke.GetComponent<powerup>());
                     }
                     else if (chance == 3)
                     {
                         GameObject speedUp = Instantiate(speedUpPowerUp, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.Euler(0, transform.eulerAngles.y + 90, 0));
                         speedUp.tag = "powerup";
-                        speedUp.GetComponent<SpeedUp>().player = player;
-                        State.powerups.Add(speedUp);
+                        StateController.instance.powerups.Add(speedUp.GetComponent<powerup>());
                     }
                     else if (chance == 4)
                     {
@@ -129,7 +125,6 @@ public class ZombieAI : MonoBehaviour
                         GunSpawn script = sniper.GetComponent<GunSpawn>();
                         script.player = player;
                         script.newCamera = GameObject.Find("PlayerCamera");
-                        State.powerups.Add(sniper);
                     }
                     else if (chance == 5)
                     {
@@ -138,7 +133,6 @@ public class ZombieAI : MonoBehaviour
                         GunSpawn script = smg.GetComponent<GunSpawn>();
                         script.player = player;
                         script.newCamera = GameObject.Find("PlayerCamera");
-                        State.powerups.Add(smg);
                     }
                     else if (chance == 6)
                     {
@@ -147,7 +141,6 @@ public class ZombieAI : MonoBehaviour
                         GunSpawn script = shotgun.GetComponent<GunSpawn>();
                         script.player = player;
                         script.newCamera = GameObject.Find("PlayerCamera");
-                        State.powerups.Add(shotgun);
                     }
                     else
                     {

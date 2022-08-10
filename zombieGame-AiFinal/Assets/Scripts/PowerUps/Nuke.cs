@@ -2,30 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Nuke : MonoBehaviour
+public class Nuke : powerup
 {
-    public GameObject player;
-    private float timer;
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         timer = 0.0f;
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
             timer += Time.deltaTime;
             if (timer % 60 >= 10)
             {
-                State.powerups.Remove(this);
+                StateController.instance.powerups.Remove(this);
                 Destroy(gameObject);
             }
     }
 
-    void OnTriggerEnter(Collider other)
+    public override void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        Debug.Log("Ding");
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Companion")
         {
             GameObject[] zombies = GameObject.FindGameObjectsWithTag("clickable");
             foreach (GameObject zom in zombies)
@@ -35,7 +34,7 @@ public class Nuke : MonoBehaviour
                     zom.GetComponent<ZombieAI>().clicked(10000);
                 }
             }
-            State.powerups.Remove(this);
+            StateController.instance.powerups.Remove(this);
             Destroy(gameObject);
         }
     }

@@ -111,22 +111,22 @@ public class GameMaster : MonoBehaviour
 
     public void calcuZombie()
     {
-        Debug.Log("CalcuZombie...");
+        //Debug.Log("CalcuZombie...");
         if (newNum) {
-            Debug.Log("Gening new number...");
+            //Debug.Log("Gening new number...");
             currSpawnAmount = Random.Range(20, 30) * (totalTime / timeRounds) / 3;
         }
         int zombieNum = currSpawnAmount;
         float percent = 1f - ((float)numOfZombies / (float)maxZombies);
-        Debug.Log("Percent: " + percent);
+        //Debug.Log("Percent: " + percent);
         if (percent < 0f)
         {
             percent = 0f;
         }
         zombies = (int)Mathf.Round(zombieNum * percent);
         newNum = false;
-        Debug.Log("Curr Spawn Amount: " + currSpawnAmount);
-        Debug.Log("Zombies Amount: " + zombies);
+        //Debug.Log("Curr Spawn Amount: " + currSpawnAmount);
+        //Debug.Log("Zombies Amount: " + zombies);
     }
 
     void summonZombie() {
@@ -256,7 +256,7 @@ public class GameMaster : MonoBehaviour
     public void subZombie() {
         numOfZombies--;
         totalKilled++;
-        Debug.Log("subZmobie");
+        //Debug.Log("subZombie");
         calcuZombie();
     }
 

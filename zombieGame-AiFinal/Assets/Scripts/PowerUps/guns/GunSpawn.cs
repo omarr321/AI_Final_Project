@@ -15,7 +15,6 @@ public class GunSpawn : MonoBehaviour
             timer += Time.deltaTime;
             if (timer % 60 >= 10)
             {
-                State.powerups.Remove(this);
                 Destroy(gameObject);
             }
     }
@@ -25,7 +24,6 @@ public class GunSpawn : MonoBehaviour
         if (other.gameObject == player)
         {
             newCamera.GetComponent<Equip>().equip(gun);
-            State.powerups.Remove(this);
             Destroy(gameObject);
         }
     }

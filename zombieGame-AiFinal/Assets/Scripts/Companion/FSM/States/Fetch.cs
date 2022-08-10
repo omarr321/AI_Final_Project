@@ -6,10 +6,10 @@ public class Fetch : State
 {
     public override void Update()
     {
-        if(powerups.Count != 0)
+        if(StateController.instance.powerups.Count > 0)
         {
-            companion.transform.position = Vector3.MoveTowards(companion.transform.position, powerups[0].transform.position, 1.0f);
-        }
+            companion.transform.position = Vector3.MoveTowards(companion.transform.position, StateController.instance.powerups[0].transform.position, 5.0f*Time.deltaTime);
+        }   
     }
     public override void LateUpdate()
     {
@@ -23,13 +23,11 @@ public class Fetch : State
             }
         }
     }
-    public override void OnEnable()
-    {
-        
-    }
     public override void Awake()
     {
         this.transitions = new List<Transition>();
-
+        Condition home = new Condition('c');
+        State h = companion.GetComponent<Homeward>();
+        this.transitions.Add(new Transition(home, h));
     }
 }
